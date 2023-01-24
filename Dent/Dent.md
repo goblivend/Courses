@@ -83,6 +83,21 @@ RSE : Evaluee selon la `triple bottom line : People, Planet, Profit`
 
 ![Tackle Financial Imbalances](./images/tackle_financial_imbalances.png)
 
+### Managing the company through the profit and loss
 
+- Operating income and expenses:
+
+
+![Managing through profits and loss](./images/managing_through_profit_and_loss)
+25% taxe on profits
+![Main Formulas](./images/formulas.png)
+RCAI : Resultat Courant Avant Impots
+
+Participation to employees mandatory when at least 50 employees
+
+Exchange rate difference : Negative / Positive
+    - Invoice sent with price according to current exchange rate
+    - Payment later according to invoice but exchange rate might be different (=> can be win or loss)
+    - Generally companies ask banks to "predict" next exchange rates and therefore set the good price
 
 
