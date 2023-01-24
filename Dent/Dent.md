@@ -50,7 +50,7 @@ RSE : Evaluee selon la `triple bottom line : People, Planet, Profit`
         - Bank loans: loans due below one year
 
 
-![Bilan fonctionel](./images/bilan_fonctionel.png)
+![Bilan fonctionel](./images/bilan_fonctionnel.png)
 
 - Fixed assets financed by stable liabilities (10 years economic life, money available for more than 10 years)
 
