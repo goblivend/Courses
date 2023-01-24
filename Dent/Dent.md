@@ -60,4 +60,29 @@ RSE : Evaluee selon la `triple bottom line : People, Planet, Profit`
     3. Treasurery : WCR - NWC
         - Also : Active Cash Flow - Passive Cash Flow
 
+    - When these financial balances not met need to change things
+
+
+    - Shorten Working Capital Cycle :
+        - Reducing credit period => reducing average collection period
+    - Tackle Financial Imbalances: 
+        - Reduce Durable Uses: Sell under use or unused assets, shut down activities
+        - Increase long term Financial ressources:
+            - Short term :
+                - increase capital (existing shareholders or new investors)
+                - Favouring self-financing by leaving profits at the disposal of the Company
+            - Long term :
+                - Decrease current assets: 
+                    - Massive destocking operation
+                    - Expand customer base
+                    - modify commercial organisation to reduce Stock
+                    - negotiate with customer to reduce payment term
+                    - mobilise trade receivables through discounting or factoring
+                - Increate Current Liabilities: 
+                    - Negotiate with suppliers to extend payment terms
+
+![Tackle Financial Imbalances](./images/tackle_financial_imbalances.png)
+
+
+
 
