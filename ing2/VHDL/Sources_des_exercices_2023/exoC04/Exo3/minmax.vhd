@@ -11,5 +11,20 @@ end entity MinMax;
 
 architecture RTL of MinMax is
 begin
-
+  process(Min0Max1, X, Y)
+  begin
+    if Min0Max1 = '0' then
+      if X < Y then
+        Z <= X;
+      else
+        Z <= Y;
+      end if;
+    else
+      if X > Y then
+        Z <= X;
+      else
+        Z <= Y;
+      end if;
+    end if;
+  end process;
 end architecture RTL;
