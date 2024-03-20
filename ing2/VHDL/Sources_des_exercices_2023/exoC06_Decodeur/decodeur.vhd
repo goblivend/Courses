@@ -12,5 +12,9 @@ end entity;
 
 architecture rtl of decodeur is
 begin
-  
+  process(I, EN)
+    begin
+      Y <= (others => '0');
+      Y(to_integer(unsigned(I))) <= EN;
+    end process;
 end architecture rtl;

@@ -1,4 +1,4 @@
--- Banc de Test pour l'exercice décodeur
+-- Banc de Test pour l'exercice dï¿½codeur
 
 entity Decodeur_tb is
 port( OK: out BOOLEAN := TRUE);
@@ -10,7 +10,7 @@ use IEEE.Numeric_std.all;
 
 architecture BENCH of Decodeur_tb is
 
-  
+
   signal I : Std_logic_vector(5 downto 0);
   signal EN: Std_logic;
   signal Y : Std_logic_vector(63 downto 0);
@@ -18,9 +18,9 @@ architecture BENCH of Decodeur_tb is
 begin
 
   Stimulus: process
-    constant Zero: Std_logic_vector := 
+    constant Zero: Std_logic_vector :=
                    Std_logic_vector(To_unsigned(0, 64));
-    variable Reg : Std_logic_vector(63 downto 0) := 
+    variable Reg : Std_logic_vector(63 downto 0) :=
                    Std_logic_vector(To_unsigned(1, 64));
   begin
     EN <= '0';
@@ -29,6 +29,7 @@ begin
       wait for 10 NS;
       if Y /= Zero then
         OK <= FALSE;
+        assert false report "wrong for value";
       end if;
     end loop;
 
@@ -38,6 +39,8 @@ begin
       wait for 10 NS;
       if Y /= Reg then
         OK <= FALSE;
+        assert false report "wrong for value 2";
+
       end if;
       Reg := Reg(62 downto 0) & '0';
     end loop;
@@ -48,4 +51,3 @@ begin
   D: entity work.decodeur port map (I => I, EN => EN, Y => Y);
 
 end architecture;
-

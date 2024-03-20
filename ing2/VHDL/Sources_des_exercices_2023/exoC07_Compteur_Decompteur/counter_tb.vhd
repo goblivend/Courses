@@ -13,7 +13,7 @@ architecture Bench of counter_tb is
   signal Clock, Reset, Enable, Load, UpDn: Std_logic;
   signal Data, Q: Std_logic_vector(7 downto 0);
 
-  
+
 
 begin
 
@@ -76,13 +76,13 @@ begin
     Reset <= '0';
     wait for 2560 ns; -- Should count from 0 round to 0
     Enable <= '0';
-    wait;   
+    wait;
   end process;
 
-  G1: entity work.counter(rtl) port map (Clock => Clock, 
-  												Reset => Reset, 
-  												Enable => Enable, 
-  												Load => Load, 
+  G1: entity work.counter(rtl) port map (Clock => Clock,
+  												Reset => Reset,
+  												Enable => Enable,
+  												Load => Load,
   												UpDn => UpDn,
   												Data => Data,
   												Q => Q);
@@ -233,8 +233,7 @@ begin
     if Q /= "00000000" then
       OK <= False;
     end if;
-    wait;   
+    wait;
   end process;
 
 end architecture Bench;
-
