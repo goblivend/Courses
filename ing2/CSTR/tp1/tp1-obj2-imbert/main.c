@@ -3,13 +3,13 @@
 
 void main(void) {
     int i;
-    First__sum2_out o;
-    First__sum2_mem s;
-    First__sum2_reset(&s);
+    Sum2__sum2_out o;
+    Sum2__sum2_mem s;
+    Sum2__sum2_reset(&s);
 
     for(;;){
         printf("Inputs:"); scanf("%d", &i);
-        First__sum2_step(i, &o,&s);
+        Sum2__sum2_step(i, &o,&s);
         printf("Result: o=%d\n", o.o);
     }
 
