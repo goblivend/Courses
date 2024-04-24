@@ -5,8 +5,9 @@ use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity RamChip is
-  port (Address: in Std_logic_vector(3 downto 0);
-        Data: inout Std_logic_vector(7 downto 0);
+generic(AddressSize: positive := 4; WordSize: positive := 8);
+  port (Address: in Std_logic_vector(AddressSize-1 downto 0);
+        Data: inout Std_logic_vector(WordSize-1 downto 0);
         nCS, nWE, nOE: in Std_logic);
 end entity;
 
