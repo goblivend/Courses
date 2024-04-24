@@ -1,2 +1,14 @@
 work/
 vsim.wlf
+.DS_Store
+*.v
+*.qpf
+*.qws
+*.qdf
+db/
+incremental_db
+output_files
+simulation
+*.bak
+qar_info.json
+*description.txt
