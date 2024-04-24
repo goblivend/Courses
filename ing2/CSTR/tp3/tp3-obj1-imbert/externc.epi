@@ -1,0 +1,3 @@
+val fun log_f (idx:int; i:int; o:int) returns ()
+val fun log_gnc (idx:int; i:int; o:int) returns ()
+val fun log_thermal (idx:int) returns ()
