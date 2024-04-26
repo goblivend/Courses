@@ -37,7 +37,7 @@ begin
             report "Clock Rising Edge" severity note;
             if (we = '1') then
                 banc(to_integer(unsigned(rw))) <= w;
-                report "Ecriture dans le registre " & integer'image(to_integer(unsigned(rw))) severity note;
+                report "Ecriture dans le registre " & integer'image(to_integer(unsigned(rw))) & " = " & integer'image(to_integer(unsigned(w))) severity note;
             end if;
         end if ;
     end process ; -- identifier

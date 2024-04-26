@@ -19,42 +19,42 @@ begin
 
         -- -- -- -- -- -- --
 
-        -- va := to_signed(0, 32);
-        -- vb := to_signed(0, 32);
-        -- a <= std_logic_vector(va);
-        -- b <= std_logic_vector(vb);
+        va := to_signed(0, 32);
+        vb := to_signed(0, 32);
+        a <= std_logic_vector(va);
+        b <= std_logic_vector(vb);
 
-        -- wait for 5 NS;
+        wait for 5 NS;
 
-        -- if signed(result) /= to_signed(0, 32) or n /= '0' or z /= '1' or c /= '0' or v /= '0'  then
-        --     OK <= FALSE;
-        -- end if;
-
-        -- -- -- -- -- -- --
-
-        -- va := to_signed(5, 32);
-        -- vb := to_signed(0, 32);
-        -- a <= std_logic_vector(va);
-        -- b <= std_logic_vector(vb);
-
-        -- wait for 5 NS;
-
-        -- if signed(result) /= to_signed(5, 32) or n /= '0' or z /= '0' or c /= '0' or v /= '0'  then
-        --     OK <= FALSE;
-        -- end if;
+        if signed(result) /= to_signed(0, 32) or n /= '0' or z /= '1' or c /= '0' or v /= '0'  then
+            OK <= FALSE;
+        end if;
 
         -- -- -- -- -- -- --
 
-        -- va := to_signed(-5, 32);
-        -- vb := to_signed(0, 32);
-        -- a <= std_logic_vector(va);
-        -- b <= std_logic_vector(vb);
+        va := to_signed(5, 32);
+        vb := to_signed(0, 32);
+        a <= std_logic_vector(va);
+        b <= std_logic_vector(vb);
 
-        -- wait for 5 NS;
+        wait for 5 NS;
 
-        -- if signed(result) /= to_signed(-5, 32)  or n /= '1' or z /= '0' or c /= '0' or v /= '0' then
-        --     OK <= FALSE;
-        -- end if;
+        if signed(result) /= to_signed(5, 32) or n /= '0' or z /= '0' or c /= '0' or v /= '0'  then
+            OK <= FALSE;
+        end if;
+
+        -- -- -- -- -- -- --
+
+        va := to_signed(-5, 32);
+        vb := to_signed(0, 32);
+        a <= std_logic_vector(va);
+        b <= std_logic_vector(vb);
+
+        wait for 5 NS;
+
+        if signed(result) /= to_signed(-5, 32)  or n /= '1' or z /= '0' or c /= '0' or v /= '0' then
+            OK <= FALSE;
+        end if;
 
         -- -- -- -- -- -- --
 
@@ -65,22 +65,23 @@ begin
 
         wait for 5 NS;
 
-        if signed(result) /= to_signed(0, 32) or n /= '0' or z /= '1' or c /= '0' or v /= '0' then
+        if signed(result) /= to_signed(0, 32) or n /= '0' or z /= '1' or c /= '1' or v /= '0' then
             OK <= FALSE;
         end if;
 
         -- -- -- -- -- -- --
 
-        -- va := to_signed(integer'high, 32);
-        -- vb := to_signed(1, 32);
-        -- a <= std_logic_vector(va);
-        -- b <= std_logic_vector(vb);
+        va := to_signed(integer'high, 32);
+        vb := to_signed(1, 32);
+        a <= std_logic_vector(va);
+        b <= std_logic_vector(vb);
 
-        -- wait for 5 NS;
+        wait for 5 NS;
 
-        -- if signed(result) /= to_signed(0, 32) or n /= '0' or z /= '0' or c /= '1' or v /= '0' then
-        --     OK <= FALSE;
-        -- end if;
+        if signed(result) /= to_signed(integer'low, 32) or n /= '1' or z /= '0' or c /= '0' or v /= '1' then
+            OK <= FALSE;
+            report "found" & integer'image(to_integer(signed(result)));
+        end if;
 
 
 

@@ -24,34 +24,32 @@ begin
         rst <= '0';
         wait for 5 NS;
 
--- - R(1) = R(15)
--- - R(1) = R(1) + R(15)
--- - R(2) = R(1) + R(15)
--- - R(3) = R(1) - R(15)
--- - R(5) = R(7) - R(15)
 
         -- -- -- -- -- -- --
-
+        -- - R(1) = R(15)
 
         op <= "011";
         ra <= X"F";
         rb <= X"1";
         rw <= X"1";
         wait for 1 NS;
+        alua <= rama;
+        alub <= ramb;
+        wait for 1 NS;
+
         we <= '1';
-        w <= rama;
-        report "R(1) = R(15)" severity NOTE;
-        report "rama = " & integer'image(to_integer(signed(rama))) severity NOTE;
-        report "w = " & integer'image(to_integer(signed(w))) severity NOTE;
+        w <= result;
+
         clk <= '1';
 
         wait for 5 NS;
+        we <= '0';
 
         if rama /= X"00000030" or ramb /= X"00000030" then
             OK <= FALSE;
-            report "R(1) = R(15) failed" severity ERROR;
+            report "R(1)  = R(15) failed" severity ERROR;
             report "R(15) = " & integer'image(to_integer(signed(rama))) severity ERROR;
-            report "R(1) = " & integer'image(to_integer(signed(ramb))) severity ERROR;
+            report "R(1)  = " & integer'image(to_integer(signed(ramb))) severity ERROR;
         end if;
 
         clk <= '0';
@@ -59,10 +57,12 @@ begin
         wait for 5 NS;
 
         -- -- -- -- -- -- --
+        -- - R(1) = R(1) + R(15)
 
-        ra <= X"F";
-        rb <= X"1";
+        ra <= X"1";
+        rb <= X"F";
         rw <= X"1";
+        wait for 1 NS;
 
         op <= "000";
         alua <= rama;
@@ -74,17 +74,138 @@ begin
         clk <= '1';
 
         wait for 5 NS;
+        we <= '0';
 
-        if rama /= X"00000030" or ramb /= X"00000060" then
+        if rama /= X"00000060" or ramb /= X"00000030" then
             OK <= FALSE;
+            report "R(1)  = R(1) + R(15) failed" severity ERROR;
+            report "R(1)  = " & integer'image(to_integer(signed(rama))) severity ERROR;
+            report "R(15) = " & integer'image(to_integer(signed(ramb))) severity ERROR;
         end if;
 
         clk <= '0';
 
         wait for 5 NS;
 
+        -- -- -- -- -- -- --
+        -- - R(2) = R(1) + R(15)
+
+        ra <= X"1";
+        rb <= X"F";
+        rw <= X"2";
+        wait for 1 NS;
+
+        op <= "000";
+        alua <= rama;
+        alub <= ramb;
+        wait for 1 NS;
+        we <= '1';
+        w <= result;
+
+        clk <= '1';
+
+        wait for 5 NS;
+        we <= '0';
+
+        if rama /= X"00000060" or ramb /= X"00000030" then
+            OK <= FALSE;
+            report "R(2)  = R(1) + R(15) failed" severity ERROR;
+            report "R(1)  = " & integer'image(to_integer(signed(rama))) severity ERROR;
+            report "R(15) = " & integer'image(to_integer(signed(ramb))) severity ERROR;
+        end if;
+
+        ra <= X"2";
+        wait for 1 NS;
+        if rama /= X"00000090" then
+            OK <= FALSE;
+            report "R(2) = R(1) + R(15) failed" severity ERROR;
+            report "R(2) = " & integer'image(to_integer(signed(rama))) severity ERROR;
+        end if;
+
+        clk <= '0';
+
+        wait for 5 NS;
+
+        -- -- -- -- -- -- --
+        -- - R(3) = R(1) - R(15)
+
+        ra <= X"1";
+        rb <= X"F";
+        rw <= X"3";
+        wait for 1 NS;
+
+        op <= "010";
+        alua <= rama;
+        alub <= ramb;
+        wait for 1 NS;
+        we <= '1';
+        w <= result;
+
+        clk <= '1';
+
+        wait for 5 NS;
+        we <= '0';
+
+        if rama /= X"00000060" or ramb /= X"00000030" then
+            OK <= FALSE;
+            report "R(3)  = R(1) - R(15) failed" severity ERROR;
+            report "R(1)  = " & integer'image(to_integer(signed(rama))) severity ERROR;
+            report "R(15) = " & integer'image(to_integer(signed(ramb))) severity ERROR;
+        end if;
+
+        ra <= X"3";
+        wait for 1 NS;
+        if rama /= X"00000030" then
+            OK <= FALSE;
+            report "R(3) = R(1) - R(15) failed" severity ERROR;
+            report "R(3) = " & integer'image(to_integer(signed(rama))) severity ERROR;
+        end if;
+
+        clk <= '0';
+
+        wait for 5 NS;
+
+        -- -- -- -- -- -- --
+        -- - R(5) = R(7) - R(15)
 
 
+        ra <= X"7";
+        rb <= X"F";
+        rw <= X"5";
+
+        wait for 1 NS;
+
+        op <= "010";
+        alua <= rama;
+        alub <= ramb;
+        wait for 1 NS;
+        we <= '1';
+        w <= result;
+
+        clk <= '1';
+
+        wait for 5 NS;
+        we <= '0';
+
+        if rama /= X"00000000" or ramb /= X"00000030" then
+            OK <= FALSE;
+            report "R(5)  = R(7) - R(15) failed" severity ERROR;
+            report "R(7)  = " & integer'image(to_integer(signed(rama))) severity ERROR;
+            report "R(15) = " & integer'image(to_integer(signed(ramb))) severity ERROR;
+        end if;
+
+        ra <= X"5";
+        wait for 1 NS;
+        if rama /= X"FFFFFFD0" then
+            report integer'image(to_integer(signed(rama)));
+            OK <= FALSE;
+            report "R(5) = R(7) - R(15) failed" severity ERROR;
+            report "R(5) = " & integer'image(to_integer(signed(rama))) severity ERROR;
+        end if;
+
+        clk <= '0';
+
+        wait for 5 NS;
 
         wait for 5 NS;
         wait;
