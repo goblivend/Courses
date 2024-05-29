@@ -80,7 +80,23 @@ begin
 
         if signed(result) /= to_signed(integer'low, 32) or n /= '1' or z /= '0' or c /= '0' or v /= '1' then
             OK <= FALSE;
-            report "found" & integer'image(to_integer(signed(result)));
+            report "found" & integer'image(to_integer(signed(result))) & " " & integer'image(integer'low);
+        end if;
+
+
+        -- -- -- -- -- -- --
+
+        op <= "010";
+        va := to_signed(18, 32);
+        vb := to_signed(-48, 32);
+        a <= std_logic_vector(va);
+        b <= std_logic_vector(vb);
+
+        wait for 5 NS;
+
+        if signed(result) /= to_signed(66, 32) or n /= '0' or z /= '0' or c /= '1' or v /= '0' then
+            OK <= FALSE;
+            report "found" & integer'image(to_integer(signed(result))) ;
         end if;
 
 

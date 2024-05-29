@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity mem is
     port (
         clk : in std_logic;
-        reset : in std_logic;
+        rst : in std_logic;
         addr : in std_logic_vector(5 downto 0);
         datain : in std_logic_vector(31 downto 0);
         dataout : out std_logic_vector(31 downto 0);
@@ -28,14 +28,14 @@ architecture rtl of mem is
         -- Déclaration et Initialisation du Banc de Memoire 64x32 bits
     signal Banc: table:=init_banc;
 begin
-    process(clk, reset)
+    process(clk, rst)
     begin
-        if (reset = '1') then
+        if (rst = '1') then
             banc <= init_banc;
         elsif rising_edge(clk) then
             if (we = '1') then
                 banc(to_integer(unsigned(addr))) <= datain;
-                report "Ecriture dans la memoire " & integer'image(to_integer(unsigned(addr))) & " = " & integer'image(to_integer(unsigned(datain))) severity note;
+                -- report "Ecriture dans la memoire " & integer'image(to_integer(unsigned(addr))) & " = " & integer'image(to_integer(unsigned(datain))) severity note;
             end if;
         end if ;
     end process ; -- identifier

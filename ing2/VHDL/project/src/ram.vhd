@@ -4,12 +4,12 @@ use ieee.numeric_std.all;
 
 entity ram is
     port (
-        clk : in std_logic;
-        reset : in std_logic;
-        ra, rb, rw : in std_logic_vector(3 downto 0);
-        we : in std_logic;
-        w : in std_logic_vector(31 downto 0);
-        a, b : out std_logic_vector(31 downto 0)
+        clk : in std_logic ;
+        rst : in std_logic := '0';
+        ra, rb, rw : in std_logic_vector(3 downto 0) := (others=>'0');
+        we : in std_logic := '0';
+        w : in std_logic_vector(31 downto 0) := (others=>'0');
+        a, b : out std_logic_vector(31 downto 0) := (others=>'0')
         );
 end entity ram;
 
@@ -29,15 +29,15 @@ architecture rtl of ram is
         -- Déclaration et Initialisation du Banc de Registres 16x32 bits
     signal Banc: table:=init_banc;
 begin
-    process(clk, reset)
+    process(clk, rst)
     begin
-        if (reset = '1') then
+        if (rst = '1') then
             banc <= init_banc;
         elsif rising_edge(clk) then
-            report "Clock Rising Edge" severity note;
+            -- report "Clock Rising Edge" severity note;
             if (we = '1') then
                 banc(to_integer(unsigned(rw))) <= w;
-                report "Ecriture dans le registre " & integer'image(to_integer(unsigned(rw))) & " = " & integer'image(to_integer(unsigned(w))) severity note;
+                -- report "Ecriture dans le registre " & integer'image(to_integer(unsigned(rw))) & " = " & integer'image(to_integer(signed(w))) severity note;
             end if;
         end if ;
     end process ; -- identifier

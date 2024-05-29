@@ -1,7 +1,7 @@
 vlib work
 
-vcom -93 ../src/mux21.vhd
-vcom -93 mux21_tb.vhd
+vcom -2008 ../src/mux21.vhd
+vcom -2008 mux21_tb.vhd
 
 vsim mux21_tb
 

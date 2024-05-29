@@ -120,7 +120,7 @@ begin
 
     UUT: entity work.RAM(RTL)  port map (
         clk => clk,
-        reset => rst,
+        rst => rst,
         ra => ra,
         rb => rb,
         rw => rw,
