@@ -4,21 +4,21 @@ use ieee.numeric_std.all;
 
 entity proc is
   port (
-    clk, rst : in std_logic ;
-    reg_aff : out std_logic_vector(31 downto 0)
+    clk, rst : in std_logic := '0';
+    reg_aff : out std_logic_vector(31 downto 0) := (others => '0')
   );
 end proc ;
 
 architecture rtl of proc is
-    signal psr_regs, psr_regs_out, instr : std_logic_vector(31 downto 0) := (others => '0');
+    signal psr_regs, psr_regs_out, instr : std_logic_vector(31 downto 0)          := (others => '0');
     signal nPCSel, RegWr, AluSrc, PSREn, MemWr, WrSrc, RegSel, RegAff : std_logic := '0';
-    signal ALUCtr : std_logic_vector(2 downto 0)      := (others => '0');
-    signal Rd, Rn, Rm, mux_rb : std_logic_vector(3 downto 0)  := (others => '0');
-    signal imm8 : std_logic_vector(7 downto 0)        := (others => '0');
-    signal imm24 : std_logic_vector(23 downto 0)      := (others => '0');
-    signal curr_reg_aff : std_logic_vector(31 downto 0) := (others => '0');
-    signal tmp_reg_aff : std_logic_vector(31 downto 0)  := (others => '0');
+    signal ALUCtr : std_logic_vector(2 downto 0)                                  := (others => '0');
+    signal Rd, Rn, Rm, mux_rb : std_logic_vector(3 downto 0)                      := (others => '0');
+    signal imm8 : std_logic_vector(7 downto 0)                                    := (others => '0');
+    signal imm24 : std_logic_vector(23 downto 0)                                  := (others => '0');
+    signal curr_reg_aff, tmp_reg_aff : std_logic_vector(31 downto 0)              := (others => '0');
 begin
+
     mux21Rb: entity work.mux21 generic map (
         n => 4
     ) port map (
@@ -82,6 +82,15 @@ begin
         Imm24 => Imm24
     ) ;
 
-    curr_reg_aff <= tmp_reg_aff when RegAff = '1' else curr_reg_aff;
-    reg_aff <= curr_reg_aff;
+    aff_reg : entity work.reg(rtl) port map (
+        clk => clk,
+        rst => rst,
+        we => RegAff,
+        pc_in => tmp_reg_aff,
+        pc_out => reg_aff
+    ) ;
+
+
+    -- curr_reg_aff <= tmp_reg_aff when RegAff = '1' else curr_reg_aff;
+    -- reg_aff <= curr_reg_aff;
 end architecture ; -- rtl

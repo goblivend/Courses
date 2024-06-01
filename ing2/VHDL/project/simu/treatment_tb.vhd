@@ -171,7 +171,7 @@ begin
         wait for 1 NS;
         -- report "Done sixth test mem[reg[2]] = reg[4] = 42"; -- mem[33] = 42
         assert (reg_bench(2) = x"00000012") report "Error in sixth test" & integer'image(to_integer(signed(reg_bench(2)))) severity error;
-        assert (mem_bench(18) = x"00000042") report "Error in sixth test" & integer'image(to_integer(signed(mem_bench(33)))) severity error;
+        assert (mem_bench(18) = x"00000042") report "Error in sixth test" & integer'image(to_integer(signed(mem_bench(18)))) severity error;
         -- -- -- -- -- -- --
 
         add_reg_a <= x"0";

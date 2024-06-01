@@ -7,6 +7,6 @@ vsim ram_tb
 
 view signals
 
-add wave *
+add wave -radix hexadecimal *
 
 run -all

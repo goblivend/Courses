@@ -4,12 +4,12 @@ use ieee.numeric_std.all;
 
 entity mem is
     port (
-        clk : in std_logic;
-        rst : in std_logic;
-        addr : in std_logic_vector(5 downto 0);
-        datain : in std_logic_vector(31 downto 0);
-        dataout : out std_logic_vector(31 downto 0);
-        we : in std_logic
+        clk : in std_logic := '0';
+        rst : in std_logic := '0';
+        addr : in std_logic_vector(5 downto 0) := (others=>'0');
+        datain : in std_logic_vector(31 downto 0) := (others=>'0');
+        dataout : out std_logic_vector(31 downto 0) := (others=>'0');
+        we : in std_logic := '0'
     );
 end entity mem;
 
@@ -20,7 +20,13 @@ architecture rtl of mem is
     function init_banc return table is
         variable result : table;
     begin
-        for i in 63 downto 0 loop
+        for i in 63 downto 44 loop
+            result(i) := (others=>'0');
+        end loop;
+        for i in 43 downto 15 loop
+            result(i) := x"00000001";
+        end loop;
+        for i in 14 downto 0 loop
             result(i) := (others=>'0');
         end loop;
         return result;

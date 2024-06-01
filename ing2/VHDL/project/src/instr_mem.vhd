@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity instr_mem is
     port(
-        PC: in std_logic_vector (31 downto 0);
-        Instruction: out std_logic_vector (31 downto 0)
+        PC: in std_logic_vector (31 downto 0) := (others=>'0');
+        Instruction: out std_logic_vector (31 downto 0) := x"E3A01020"--(others=>'0')
     );
 end entity;
 
@@ -32,3 +32,36 @@ architecture RTL of instr_mem is
 begin
     Instruction <= mem(to_integer(unsigned (PC)));
 end architecture;
+
+--
+
+-- E3A01020 -- MOV R1,#0x20   -- R1 = 0x20
+-- E    3    A    0    1    0    2    0
+-- 1110 0011 1010 0000 0001 0000 0010 0000
+-- ^    ^    ^    ^    ^    ^    ^    ^  ^
+-- 31   27   23   19   15   11   7    3  0
+
+-- E3A02000 -- MOV R2,#0x00   -- R2 = 0
+-- E    3    A    0    2    0    0    0
+-- 1110 0011 1010 0000 0010 0000 0000 0000
+-- ^    ^    ^    ^    ^    ^    ^    ^  ^
+-- 31   27   23   19   15   11   7    3  0
+
+-- E6110000 -- LDR R0,0(R1)   -- R0 = DATAMEM[R1]
+-- E    6    1    1    0    0    0    0
+-- 1110 0110 0001 0001 0000 0000 0000 0000
+-- ^    ^    ^    ^    ^    ^    ^    ^  ^
+-- 31   27   23   19   15   11   7    3  0
+
+-- E351002A -- CMP R1,0x2A    -- Flag = R1-0x2A,si R1 <= 0x2A
+-- E    3    5    1    0    0    2    A
+-- 1110 0011 0101 0001 0000 0000 0010 1010
+-- ^    ^    ^    ^    ^    ^    ^    ^  ^
+-- 31   27   23   19   15   11   7    3  0
+
+-- E6012000 -- STR R2,0(R1)   -- DATAMEM[R1] = R2
+-- E    6    0    1    2    0    0    0
+-- 1110 0110 0000 0001 0010 0000 0000 0000
+-- ^    ^    ^    ^    ^    ^    ^    ^  ^
+-- 31   27   23   19   15   11   7    3  0
+--                 Rn   Rd

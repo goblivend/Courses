@@ -24,9 +24,10 @@ library IEEE;
   use IEEE.numeric_std.all;
 
 Entity seven_seg is
-  port ( Data   : in  std_logic_vector(3 downto 0); -- Expected within 0 .. 9
-         Pol    : in  std_logic;                    -- '0' if active LOW
-         Segout : out std_logic_vector(1 to 7) );   -- Segments A, B, C, D, E, F, G
+  port ( Data   : in  std_logic_vector(3 downto 0) := "0000";      -- Expected within 0 .. F
+         Pol    : in  std_logic := '0';                            -- '0' if active LOW
+         Segout : out std_logic_vector(1 to 7) := (others => '0')  -- Segments A, B, C, D, E, F, G
+  );
 end entity seven_seg;
 
 Architecture COMB of seven_seg is

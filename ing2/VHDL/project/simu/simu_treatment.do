@@ -13,7 +13,7 @@ vsim treatment_tb
 view signals
 
 add wave -radix hexadecimal *
-add wave -radix hexadecimal /treatment_tb/proc/reg_bench
-add wave -radix hexadecimal /treatment_tb/proc/mem_bench
+add wave -radix hexadecimal {sim:/treatment_tb/uut/register1/Banc}
+add wave -radix hexadecimal {sim:/treatment_tb/uut/mem1/Banc}
 
 run -all

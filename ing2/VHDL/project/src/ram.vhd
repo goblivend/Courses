@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity ram is
     port (
-        clk : in std_logic ;
+        clk : in std_logic := '0';
         rst : in std_logic := '0';
         ra, rb, rw : in std_logic_vector(3 downto 0) := (others=>'0');
         we : in std_logic := '0';
@@ -23,7 +23,7 @@ architecture rtl of ram is
         for i in 14 downto 0 loop
             result(i) := (others=>'0');
         end loop;
-        result(15) := X"00000030";
+        result(15) := X"00000000";
         return result;
     end init_banc;
         -- Déclaration et Initialisation du Banc de Registres 16x32 bits
@@ -34,10 +34,8 @@ begin
         if (rst = '1') then
             banc <= init_banc;
         elsif rising_edge(clk) then
-            -- report "Clock Rising Edge" severity note;
             if (we = '1') then
                 banc(to_integer(unsigned(rw))) <= w;
-                -- report "Ecriture dans le registre " & integer'image(to_integer(unsigned(rw))) & " = " & integer'image(to_integer(signed(w))) severity note;
             end if;
         end if ;
     end process ; -- identifier

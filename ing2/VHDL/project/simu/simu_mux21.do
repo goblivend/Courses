@@ -7,6 +7,6 @@ vsim mux21_tb
 
 view signals
 
-add wave *
+add wave -radix hexadecimal *
 
 run -all

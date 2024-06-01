@@ -9,10 +9,10 @@ use ieee.numeric_std.all;
 
 entity alu is
     port(
-        op: in std_logic_vector(2 downto 0);
-        a, b: in std_logic_vector(31 downto 0);
-        s: out std_logic_vector(31 downto 0);
-        n, z, c, v: out std_logic
+        op: in std_logic_vector(2 downto 0) := "000";
+        a, b: in std_logic_vector(31 downto 0) := (others => '0');
+        s: out std_logic_vector(31 downto 0) := (others => '0');
+        n, z, c, v: out std_logic := '0'
     );
 end entity alu;
 

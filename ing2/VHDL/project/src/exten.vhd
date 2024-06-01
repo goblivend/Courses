@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity exten is
     generic (
-        n : integer
+        n : integer := 8
         );
     port (
         e : in std_logic_vector(n-1 downto 0) := (others=>'0');
