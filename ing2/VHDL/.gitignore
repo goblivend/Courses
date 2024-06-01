@@ -1,8 +1,8 @@
 work/
 vsim.wlf
 .DS_Store
-*.v
-*.qpf
+#*.v
+#*.qpf
 *.qws
 *.qdf
 db/
