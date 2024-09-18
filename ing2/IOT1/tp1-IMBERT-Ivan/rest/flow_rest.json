@@ -1,0 +1,331 @@
+[
+    {
+        "id": "1459ec0af9f77a3e",
+        "type": "tab",
+        "label": "Flow Rest",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5042d1a3799867ec",
+        "type": "http request",
+        "z": "1459ec0af9f77a3e",
+        "name": "response",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.35.68/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": true,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 680,
+        "y": 400,
+        "wires": [
+            [
+                "97951381e168a8f9",
+                "d8e45f32fed6457b"
+            ]
+        ]
+    },
+    {
+        "id": "8f0ba4d591c48476",
+        "type": "inject",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "props": [],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "5042d1a3799867ec"
+            ]
+        ]
+    },
+    {
+        "id": "97951381e168a8f9",
+        "type": "change",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.variables.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 360,
+        "wires": [
+            [
+                "8211647f0a02d255",
+                "54ca89e5aead58c6"
+            ]
+        ]
+    },
+    {
+        "id": "d8e45f32fed6457b",
+        "type": "change",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.variables.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "f1e89cfaa8b1a2af",
+                "7798814ba3064235"
+            ]
+        ]
+    },
+    {
+        "id": "481f916b92ea30ac",
+        "type": "ui_button",
+        "z": "1459ec0af9f77a3e",
+        "name": "Toggle LED",
+        "group": "c0b8d28fe2993636",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Toggle LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 690,
+        "y": 540,
+        "wires": [
+            [
+                "b679248a2545765d"
+            ]
+        ]
+    },
+    {
+        "id": "8211647f0a02d255",
+        "type": "ui_gauge",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "group": "c0b8d28fe2993636",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b2b5",
+            "#e6c700",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1130,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f1e89cfaa8b1a2af",
+        "type": "ui_gauge",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "group": "c0b8d28fe2993636",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b54d00",
+            "#00e605",
+            "#377cf3"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1120,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b679248a2545765d",
+        "type": "http request",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.35.68/led/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 940,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54ca89e5aead58c6",
+        "type": "ui_chart",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "group": "427c3fbb83b5877c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature over time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1160,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7798814ba3064235",
+        "type": "ui_chart",
+        "z": "1459ec0af9f77a3e",
+        "name": "",
+        "group": "427c3fbb83b5877c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity over time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0b8d28fe2993636",
+        "type": "ui_group",
+        "name": "DHT",
+        "tab": "4a0595a5.faafa4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "427c3fbb83b5877c",
+        "type": "ui_group",
+        "name": "DHT Over Time",
+        "tab": "4a0595a5.faafa4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a0595a5.faafa4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

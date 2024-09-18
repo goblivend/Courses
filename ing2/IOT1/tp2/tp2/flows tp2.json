@@ -1,0 +1,563 @@
+[
+    {
+        "id": "6ad01306aa587058",
+        "type": "tab",
+        "label": "Flow Mqtt",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1dc1240bce5f8c17",
+        "type": "mqtt in",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "topic": "v3/tp-iot-2024@ttn/devices/eui-70b3d57ed0068382/up",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9d274ced03f887a9",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 620,
+        "y": 440,
+        "wires": [
+            [
+                "5dab23e4d9cf043d"
+            ]
+        ]
+    },
+    {
+        "id": "1b5f789d7dd906dd",
+        "type": "ui_gauge",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "c0b8d28fe2993636",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#f7df09",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1230,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e95509b317247d84",
+        "type": "ui_gauge",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "c0b8d28fe2993636",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "100",
+        "colors": [
+            "#53a4e6",
+            "#1d78a9",
+            "#4e38c9"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "fcfd5fd816b5b229",
+        "type": "ui_chart",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "427c3fbb83b5877c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature over time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1260,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca75202294414eb2",
+        "type": "ui_chart",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "427c3fbb83b5877c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity over time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1290,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dab23e4d9cf043d",
+        "type": "function",
+        "z": "6ad01306aa587058",
+        "name": "unpack",
+        "func": "msg.payload = msg.payload.uplink_message.decoded_payload\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 440,
+        "wires": [
+            [
+                "274c9d05c447a4ca",
+                "4c4d3abfbc012284",
+                "99c27e4fcb98595e",
+                "a8905483985b5b53"
+            ]
+        ]
+    },
+    {
+        "id": "274c9d05c447a4ca",
+        "type": "debug",
+        "z": "6ad01306aa587058",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4c4d3abfbc012284",
+        "type": "function",
+        "z": "6ad01306aa587058",
+        "name": "distance",
+        "func": "msg.payload = msg.payload.distance\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 560,
+        "wires": [
+            [
+                "f8bcedbae05bc37d",
+                "f8497f260f3d18c0"
+            ]
+        ]
+    },
+    {
+        "id": "f8bcedbae05bc37d",
+        "type": "ui_gauge",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "c0b8d28fe2993636",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Distance",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#53a4e6",
+            "#1d78a9",
+            "#4e38c9"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1180,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f8497f260f3d18c0",
+        "type": "ui_chart",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "group": "427c3fbb83b5877c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Distance over time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1210,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99c27e4fcb98595e",
+        "type": "function",
+        "z": "6ad01306aa587058",
+        "name": "temperature",
+        "func": "msg.payload = msg.payload.temperature\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 320,
+        "wires": [
+            [
+                "1b5f789d7dd906dd",
+                "fcfd5fd816b5b229"
+            ]
+        ]
+    },
+    {
+        "id": "a8905483985b5b53",
+        "type": "function",
+        "z": "6ad01306aa587058",
+        "name": "Humidity",
+        "func": "msg.payload = msg.payload.humidity\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 460,
+        "wires": [
+            [
+                "e95509b317247d84",
+                "ca75202294414eb2",
+                "259c659cd5a11bd3"
+            ]
+        ]
+    },
+    {
+        "id": "51a3fe6496ce1464",
+        "type": "e-mail",
+        "z": "6ad01306aa587058",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "youmonaie.loleur45@gmail.com",
+        "dname": "Ivan",
+        "x": 1350,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "259c659cd5a11bd3",
+        "type": "switch",
+        "z": "6ad01306aa587058",
+        "name": "Too Humide",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "20",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 520,
+        "wires": [
+            [
+                "51a3fe6496ce1464"
+            ]
+        ]
+    },
+    {
+        "id": "bf519f44d042da69",
+        "type": "ui_slider",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "label": "Time slider",
+        "tooltip": "",
+        "group": "c0b8d28fe2993636",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "10",
+        "max": "50",
+        "step": "10",
+        "className": "",
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "b6a07ea0d9c45f27"
+            ]
+        ]
+    },
+    {
+        "id": "68c3f08bfb6858fc",
+        "type": "mqtt out",
+        "z": "6ad01306aa587058",
+        "name": "Time to wait",
+        "topic": "v3/tp-iot-2024@ttn/devices/eui-70b3d57ed0068382/down/push",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9d274ced03f887a9",
+        "x": 1030,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "168a340c2ba6a716",
+        "type": "debug",
+        "z": "6ad01306aa587058",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "e7c88401fdf1baa2",
+        "type": "inject",
+        "z": "6ad01306aa587058",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 690,
+        "y": 760,
+        "wires": [
+            [
+                "b6a07ea0d9c45f27"
+            ]
+        ]
+    },
+    {
+        "id": "b6a07ea0d9c45f27",
+        "type": "function",
+        "z": "6ad01306aa587058",
+        "name": "sender",
+        "func": "msg.payload =  {\n    \"downlinks\": [{\n        \"f_port\": 15,\n        \"frm_payload\": msg.payload.toString(),\n        \"priority\": \"HIGH\"\n    }]\n}\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 760,
+        "wires": [
+            [
+                "68c3f08bfb6858fc",
+                "168a340c2ba6a716"
+            ]
+        ]
+    },
+    {
+        "id": "9d274ced03f887a9",
+        "type": "mqtt-broker",
+        "name": "TTN",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c0b8d28fe2993636",
+        "type": "ui_group",
+        "name": "DHT",
+        "tab": "4a0595a5.faafa4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "427c3fbb83b5877c",
+        "type": "ui_group",
+        "name": "DHT Over Time",
+        "tab": "4a0595a5.faafa4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a0595a5.faafa4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
