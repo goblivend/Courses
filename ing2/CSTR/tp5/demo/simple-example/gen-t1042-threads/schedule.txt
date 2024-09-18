@@ -1,0 +1,20 @@
+PROCESSORS:3
+BLOCKS:2
+0 1000	g_step
+1000 2000	h_step
+END_BLOCKS
+BLOCKS:1
+0 1000	f_step
+END_BLOCKS
+BLOCKS:0
+END_BLOCKS
+
+
+CYCLE SPANS:
+Processor:0:
+  Period:1:
+    Phase:0:[0-2000]
+Processor:1:
+  Period:1:
+    Phase:0:[0-1000]
+

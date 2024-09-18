@@ -1,0 +1,36 @@
+{
+	"workers": [
+		{
+			"methods": [
+				{
+					"task": "Rosace_Controller",
+					"from": []
+				}
+				{
+					"task": "g"
+				}
+				{
+					"task": "h"
+				}
+				{
+					"task": "Rosace_Controller",
+					"from": [
+						"h",
+						"f"
+					]
+				}
+			]
+		}
+		{
+			"methods": [
+				{
+					"task": "f"
+				}
+			]
+		}
+		{
+			"methods": [
+			]
+		}
+	]
+}
