@@ -113,7 +113,7 @@ begin
         PSREn  <= '1' ;
         MemWr  <= '0' ;
         WrSrc  <= '0' ;
-        RegSel <= '0' ; -- ??????????????
+        RegSel <= '0' ;
         RegAff <= '0' ;
       when LDR =>
         nPCsel <= '0' ;
