@@ -12,3 +12,4 @@ simulation
 *.bak
 qar_info.json
 *description.txt
+rendu/
