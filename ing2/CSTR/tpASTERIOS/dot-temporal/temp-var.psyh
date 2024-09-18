@@ -1,0 +1,2 @@
+clock cl = 1 * ast_realtime_ms;
+temporal int mode = 0 with cl;

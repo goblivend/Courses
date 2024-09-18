@@ -1,0 +1,31 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+clock cl = 1 * ast_realtime_ms;
+
+
+agent tiret (uses realtime, starttime 1 with cl) {
+  global {
+      int iteration = 0;
+      int nb_dash = 0;
+  }
+
+  body start {
+    if (iteration == 2) {
+      iteration = 0;
+      advance 120 with cl;
+    } else {
+      if (nb_dash == 3){
+        nb_dash = 0;
+        iteration ++;
+        advance 1 with cl;
+        advance 36 with cl;
+      } else {
+        printf("-"); 
+        fflush(stdout);
+        nb_dash++;
+        advance 1 with cl;
+      }
+    }
+  }
+}

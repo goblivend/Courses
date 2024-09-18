@@ -1,0 +1,23 @@
+#include <asterios.h>
+
+$$#include <common.h>
+
+clock c1 = ast_realtime_ms;
+
+stream t_input_data output_fifo;
+
+agent ag_reader_part0 (uses realtime, defaultclock c1, starttime 20)
+{
+  pushto output_fifo expiration 74*clockperiod(c1);
+
+  body start
+  {
+    t_input_data data;
+    get_part0_msg(data);
+    if (data[0] != '\0')
+    {
+      push(output_fifo, data);
+    }
+    advance 1;
+  }
+}

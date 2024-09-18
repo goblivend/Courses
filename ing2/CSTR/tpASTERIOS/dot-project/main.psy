@@ -1,0 +1,32 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+clock cl = 1 * ast_realtime_ms;
+
+agent dot (uses realtime, starttime 5 with cl) {
+  global {
+      int i = 0;
+      int wait = 0;
+      int COND = 0;
+  }
+  
+  body start {
+    if (wait) {
+      if (!COND) 
+        advance 10 with cl;
+      
+      else 
+        advance 20 with cl;
+      COND = !COND;
+      wait = 0;
+    } else {
+      puts(".");
+      if (i % 5 == 0) {
+        puts("+");
+        wait = 1;
+      } 
+      i+=1;
+      advance 1 with cl;
+    }
+  } 
+}

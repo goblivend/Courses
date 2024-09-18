@@ -1,0 +1,47 @@
+#include <asterios.h>
+$$#include <display.h>
+
+
+clock c1 = ast_realtime_ms;
+clock c2 = 2 * c1;
+clock c2o1 = 2 * c1 + 1;
+clock c4o2 = 2 * c2 + 1;
+
+temporal t_decoded tv_decoded_msg with c2o1;
+temporal t_display_status tv_do_display with c2;
+
+worker displayer (uses realtime)
+{
+  input
+  {
+    job print (onclock c4o2, starttime 2, jitter clockperiod(c1))
+    {
+      consult 2 $ tv_decoded_msg;
+      consult 2 $ tv_do_display;
+
+      khibody
+      {
+        const t_ast_clock_tick date =
+          converttick(ast_realtime_ms, presenttime());
+
+        if ($[1]tv_do_display == DISPLAY)
+        {
+          display_msg(date, &($[1]tv_decoded_msg));
+        }
+        else
+        {
+          display_error(date);
+        }
+
+        if ($[0]tv_do_display == DISPLAY)
+        {
+          display_msg(date, &($[0]tv_decoded_msg));
+        }
+        else
+        {
+          display_error(date);
+        }
+      }
+    }
+  }
+}

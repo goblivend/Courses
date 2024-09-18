@@ -1,0 +1,21 @@
+#include <asterios.h>
+$$#include <decode.h>
+
+clock c1 = ast_realtime_ms;
+clock c2 = 2 * c1;
+clock c2o1 = 2 * c1 + 1;
+
+temporal t_input_data tv_raw_input_data with c2;
+temporal t_decoded tv_decoded_msg with c2o1;
+
+agent decoder (uses realtime, defaultclock c1, starttime 1 with c2)
+{
+  consult 1 $ tv_raw_input_data;
+  display tv_decoded_msg : all;
+  body start
+  {
+    decode_msg(&($[0]tv_raw_input_data), &tv_decoded_msg);
+    advance 1;
+    advance 1;
+  }
+}

@@ -1,0 +1,47 @@
+#include <asterios.h>
+
+$$#include <common.h>
+$$#include <display.h>
+
+clock c1 = ast_realtime_ms;
+clock c10 = 10*c1 + 2;
+
+stream t_input_data output_fifo;
+
+worker IO (uses realtime)
+{
+  input
+  {
+    job displayer (onclock c10, starttime 2, jitter clockperiod(c1))
+    {
+      popfrom output_fifo: ag_reader_part0, ag_reader_part1;
+
+      khibody
+      {
+        if (count(output_fifo) >= DISPLAY_MSG_NB)
+        {
+          log_message("IO: Flush at %u\n", (unsigned int)converttick(c1, presenttime()));
+
+          /* Given the design of the application, no more than 100 loops will
+           * never be needed. This bound is added to prevent a compiler warning
+           * that is raised if an infinite loop without any `advance` statement
+           * is found. */
+
+          while [100] (count(output_fifo) > 0u)
+          {
+            unsigned int i;
+            const t_input_data *const msg = pop(output_fifo);
+
+            for [8] (i = 0u; i < MSG_SIZE; ++i)
+            {
+              const char c = (*msg)[i];
+              if (c == '\0')
+              { break; }
+              log_message("%c", c);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+clock cl = 1 * ast_realtime_ms;
+
+agent dot (uses realtime, starttime 1 with cl) {
+  global {
+      int i = 0;
+  }
+  
+  body start {
+    printf("%d\n", i);
+    i ++;
+    advance 1 with cl;
+  }
+}

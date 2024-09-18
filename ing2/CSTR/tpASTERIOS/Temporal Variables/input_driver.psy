@@ -1,0 +1,50 @@
+#include <asterios.h>
+$$#include <common.h>
+
+clock c2 = 2 * ast_realtime_ms;
+
+temporal t_input_data tv_raw_input_data with c2;
+
+worker sensor_driver (uses realtime)
+{
+  global
+  {
+    /* Encode a string of 4bits characters in a 32bits word:
+     *
+     *  - 4 bits chunks can be converted to a 8 bit ASCII character by adding 97
+     *    (the ASCII value of character 'a');
+     *  - 'f' is the termination character;
+     *  - the string is encoded from left to right, i.e. the first character of
+     *    the string are the 4 most significant bits of the 32 bits word.
+     *
+     * See decode_4_bits() for the implementation of the decoding protocol.
+     */
+    const t_input_data data[] = {
+      0x74bbef00, /* to be decoded in 'hello' */
+      0xf0000000, /* to be decoded in empty line */
+      0xa0000000, /* ERROR (decoded in invalid string) */
+      0x00000000, /* ERROR (decoded in invalid string) */
+      0x74bbef00, /* to be decoded in 'hello' */
+      0x74bbef00, /* to be decoded in 'hello' */
+      0x74bbef00, /* to be decoded in 'hello' */
+      0x74bbef00, /* to be decoded in 'hello' */
+      0x74bbef00, /* to be decoded in 'hello' */
+      0x74bbef00  /* to be decoded in 'hello' */
+    };
+  }
+
+  output
+  {
+    job j0 (onclock c2, starttime 1)
+    {
+      display tv_raw_input_data : all;
+      khibody
+      {
+        const t_ast_clock_tick date =
+          converttick(ast_realtime_ms, presenttime());
+        unsigned int to_send = (((unsigned int)date/2 - 1) % 10);
+        tv_raw_input_data = data[to_send];
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+#include <asterios.h>
+$$#include <common.h>
+
+clock c1 = 1 * ast_realtime_ms;
+clock c2 = 2 * c1;
+clock c2o1 = 2 * c1 + 1;
+clock c4 = 2 * c2;
+
+temporal t_decoded tv_decoded_msg with c2o1;
+temporal t_display_status tv_do_display with c2;
+
+agent filter (uses realtime, defaultclock c1, starttime 3 with c1)
+{
+  consult 1 $ tv_decoded_msg;
+  display tv_do_display : all;
+
+  body start
+  {
+    int i;
+    const char *const values = $[0]tv_decoded_msg.values;
+
+    tv_do_display = ERROR;
+
+    /* The bound '8' is explicitly specified to tell the PsyC compiler that
+     * this `for` loop is not an infinite loop and will be executed at most 8
+     * times */
+    for [8] (i = 0; i < 8 ; ++i)
+    {
+      /* the criterion to tell if the string is correct is if we find a
+       * termination (null) character */
+      if (values[i] == 0)
+      { tv_do_display = DISPLAY; }
+    }
+
+    advance 1;
+    advance 1;
+  }
+}

@@ -1,0 +1,38 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+#include <temp-var.psyh>
+
+agent dot (uses realtime, starttime 5 with cl) {
+  consult 1$mode;
+  global {
+      int i = 0;
+      int COND = 0;
+  }
+
+  body wait {
+    int var = $[0]mode; 
+    printf("Waiting : %d at %d\n", var, i);
+    if (!COND)
+      advance 10 with cl;
+    else
+      advance 20 with cl;
+    
+    if (var == 0)
+      jump start;
+  }
+
+  body start {
+    int var = $[0]mode; 
+    if (var == 1)
+      jump wait;
+    i+=1;
+    puts(".");
+    advance 1 with cl;
+
+    if (i % 5 == 0) {
+      puts("+");
+    }
+  
+  }
+}

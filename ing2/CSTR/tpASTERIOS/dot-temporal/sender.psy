@@ -1,0 +1,18 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+#include <temp-var.psyh>
+
+
+agent sender (uses realtime, starttime 5 with cl) {
+  display mode : all;
+  global {
+    int md = 0;
+  }
+
+  body start {
+      mode = md;
+      md = !md;
+      advance 5 with cl;
+  }
+}

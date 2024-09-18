@@ -1,0 +1,10 @@
+*.kp
+*.json
+build/
+.metadata
+.asterios/
+.RTKSources/
+ksim-default/
+source/
+include/
+

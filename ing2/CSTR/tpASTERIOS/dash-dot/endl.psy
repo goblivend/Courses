@@ -1,0 +1,17 @@
+#include <asterios.h>
+$$#include <stdio.h>
+
+clock cl = 1 * ast_realtime_ms;
+
+agent endl (uses realtime, starttime 5 with cl) {
+  global {
+  }
+
+  body start {
+    puts(""); 
+    fflush(stdout); 
+    advance 2 with cl;
+    advance 38 with cl;
+
+  }
+}

@@ -1,4 +1,5 @@
 *.zip
 *.epci
 *.tar.gz
-
+aarch64-cortexA53-rpi3-runtime/
+*.img
