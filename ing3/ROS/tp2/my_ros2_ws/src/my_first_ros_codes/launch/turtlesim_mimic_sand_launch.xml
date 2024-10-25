@@ -1,0 +1,19 @@
+<launch>
+
+    <node pkg="turtlesim" exec="turtlesim_node" namespace="turtlesim1">
+        <remap from="/turtlesim1/turtle1/pose" to="/input/pose"/>
+    </node>
+    <node pkg="turtlesim" exec="mimic">
+        <remap from="/output/cmd_vel" to="/turtlesim2/turtle1/cmd_vel"/>
+    </node>
+    <node pkg="turtlesim" exec="turtlesim_node" namespace="turtlesim2">
+        <param name="background_r" value="242"/>
+        <param name="background_g" value="231"/>
+        <param name="background_b" value="191"/>
+    </node>
+    <node
+        pkg="turtlesim"
+        exec="turtle_teleop_key"
+        launch-prefix="xterm -e"
+        namespace="turtlesim1"/>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="my_first_ros_codes" exec="publish_node"/>
+    <node pkg="my_first_ros_codes" exec="subscribe_node"  launch-prefix="xterm -e"/>
+</launch>
