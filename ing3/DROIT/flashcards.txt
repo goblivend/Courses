@@ -1,0 +1,663 @@
+#separator:tab
+
+
+#html:true
+
+
+#tags column:3
+
+
+Décrivez les conséquences de mentir sur son CV.
+Mentir sur son CV peut mener au licenciement si l'employeur prouve la fraude et démontre que le salarié n'aurait pas été embauché sans cette manœuvre.
+
+
+Comment une offre d'embauche peut-elle être rétractée ?
+Tant que le destinataire n'a pas reçu l'offre, elle peut être librement rétractée.
+
+
+Définissez une promesse unilatérale d'embauche.
+Une promesse unilatérale est une offre d'embauche qui ne peut pas être révoquée. Si elle est révoquée dans le délai laissé au bénéficiaire, cela n'empêche pas la formation d'un contrat de travail.
+
+
+Quelles sont les obligations de l'employeur concernant la période d'essai ?
+L'employeur ne peut pas rompre la période d'essai pour des motifs économiques et doit prévenir la rupture dans les délais prévus.
+
+
+Comment un salarié peut-il contester la rupture de sa période d'essai ?
+Le salarié est libre de contester la rupture de sa période d'essai devant le Conseil des Prud’hommes.
+
+
+Quelles indemnités peut recevoir un salarié en cas de rupture abusive de sa période d'essai ?
+En cas de rupture abusive ou vexatoire, le salarié peut toucher des indemnités.
+
+
+Décrivez le contenu d'une proposition d'embauche.
+Une proposition d'embauche mentionne le type d'emploi, la rémunération et la date d'entrée.
+
+
+Quelles sont les limites de la période d'essai pour un cadre ?
+La période d'essai ne peut dépasser 4 mois pour les cadres et 8 mois en cas de renouvellement.
+
+
+Comment le non-respect de l'engagement par l'employeur est-il sanctionné ?
+Si l'employeur ne laisse pas le salarié prendre ses fonctions, il se verra bénéficier de l'indemnité de licenciement et de l'indemnité compensatrice de préavis.
+
+
+Définissez la période d'essai dans un contrat de travail.
+La période d'essai est une période durant laquelle le salarié est évalué, ne peut pas être rompu par l'employeur pour des motifs économiques et n'est pas obligatoire à l'embauche.
+
+
+Décris ce qu'est une fiche de poste.
+Une fiche de poste est un document qui récapitule les missions et responsabilités d'un salarié, évoluant avec le temps et les besoins.
+
+
+Quels éléments sont généralement inclus dans une fiche de poste ?
+Une fiche de poste comprend généralement un intitulé de poste, la position hiérarchique, le type de contrat, les conditions de travail, les objectifs attendus et le niveau de formation ou d'expérience requise.
+
+
+Comment un employeur peut-il modifier les conditions de travail d'un salarié ?
+Un employeur peut modifier les conditions de travail d'un salarié sans son accord, mais ne peut pas imposer une modification de son contrat de travail sans son consentement.
+
+
+Qu'est-ce qu'une clause de non-concurrence ?
+Une clause de non-concurrence est une restriction qui empêche un salarié de travailler pour des concurrents de son ancien employeur pendant une période déterminée.
+
+
+Quelles sont les conditions de validité d'une clause de non-concurrence ?
+Pour être valable, une clause de non-concurrence doit définir le territoire d'application, offrir une contrepartie financière, avoir une limite temporelle et justifier d'une raison légitime.
+
+
+Définis ce que sont les astreintes.
+Les astreintes correspondent à une période durant laquelle le salarié doit être disponible pour intervenir au service de l'entreprise.
+
+
+Comment doit être organisé le programme des astreintes ?
+Le programme des astreintes doit être communiqué aux salariés concernés dans un délai raisonnable, et si aucun délai n'est prévu, l'employeur doit prévenir 15 jours à l'avance.
+
+
+Quels avantages peuvent découler des astreintes ?
+Les astreintes peuvent donner lieu à des compensations financières ou d'autres avantages, normalement prévus dans la convention ou l'accord d'entreprise.
+
+
+Comment les avantages liés au travail doivent-ils être traités sur la fiche de paie ?
+Tous les avantages doivent figurer sur la fiche de paie pour calculer leur valeur brute et doivent être intégrés à l'assiette des cotisations et contributions sociales.
+
+
+Décrire la durée légale du travail effectif à temps complet en France.
+La durée légale du travail effectif à temps complet est de 35 heures par semaine.
+
+
+Quels sont les droits du salarié en matière de repos quotidien ?
+Le salarié a droit à un repos quotidien de 11 heures d'affilée.
+
+
+Définir la différence entre le temps de travail effectif et le temps passé à l'occasion du travail.
+Le temps de travail effectif ne comprend pas le temps passé à l'occasion du travail, comme le temps de trajet ou le temps de pause.
+
+
+Comment sont calculées les heures supplémentaires ?
+Les heures supplémentaires sont calculées dans le cadre de la semaine.
+
+
+Quelles sont les conditions pour qu'un salarié puisse faire des heures supplémentaires ?
+Le salarié ne peut faire des heures supplémentaires que si son employeur le demande, même de manière implicite.
+
+
+Décrire les caractéristiques du télétravail.
+Le télétravail caractérise tout travail qui pourrait se faire quotidiennement dans les locaux de l'employeur.
+
+
+Qui est responsable de l'assurance en cas d'accident du travail pour un salarié en télétravail ?
+L'assurance est contractée par l'employeur et le salarié est couvert pour les accidents du travail.
+
+
+Quels frais liés au télétravail doivent être pris en charge par l'employeur ?
+Les frais professionnels liés au télétravail doivent être pris en charge par l'employeur.
+
+
+Comment sont encadrées les modalités du télétravail ?
+Les modalités du télétravail sont encadrées par le contrat de travail et peuvent être modifiées.
+
+
+Qu'est-ce que le volontariat en matière de télétravail ?
+Le volontariat se base sur l'accord des parties, le télétravail ne peut être forcé par l'une des deux parties.
+
+
+Quelle est la pérennité du télétravail ?
+Le télétravail dure tant que le présent contrat de travail est en vigueur.
+
+
+Définir l'identité de droits et de devoirs dans le cadre du travail.
+L'identité de droits et de devoirs fait référence aux obligations et aux droits des parties dans le cadre du contrat de travail.
+
+
+Décris le droit à la déconnexion pour les salariés.
+Le droit à la déconnexion permet de limiter le contact de l'employeur avec le salarié pendant son temps de repos.
+
+
+Quels sont les droits et devoirs des salariés sur site ?
+Les salariés sur site ont les mêmes droits et devoirs que les autres, y compris l'obligation de justifier leur présence.
+
+
+Comment le droit à la déconnexion doit-il être respecté ?
+Le droit à la déconnexion doit être respecté de manière obligatoire et ne doit pas être détourné pour surveiller les heures de connexion des salariés.
+
+
+Quelle est l'obligation des salariés concernant leur présence ?
+Les salariés ont l'obligation de justifier leur présence sur le lieu de travail.
+
+
+Pourquoi le droit à la déconnexion est-il important ?
+Il est important pour protéger le temps de repos des salariés et éviter une surveillance excessive de leur temps de travail.
+
+
+Décris la rémunération fixe.
+La rémunération fixe est constituée d'un salaire de base qui est fixe et intangible, ne dépendant que de la bonne exécution des tâches pour lesquelles le salarié a été engagé.
+
+
+Comment l'employeur doit-il prouver un refus d'exécution de travail par le salarié ?
+En cas de litige, l'employeur doit fournir des preuves que le salarié a refusé d'exécuter son travail.
+
+
+Quelles sont les conséquences d'un non-paiement du salaire ?
+Le non-paiement ou le retard de paiement du salaire autorise le salarié à abandonner son poste ou à prendre acte de la rupture du contrat de travail aux torts de la société.
+
+
+Quel principe doit respecter le salaire ?
+"Le salaire doit respecter le principe ""À salaire égal, travail égal""."
+
+
+Définis la rémunération variable.
+La rémunération variable ne doit pas être inférieure aux minima légaux (SMIC) et les modalités de fixation des objectifs ne doivent pas décourager le salarié.
+
+
+Quelles sont les deux modalités de fixation des objectifs ?
+Les deux modalités sont : 1) Fixation d’un commun accord, nécessitant des négociations périodiques. 2) Fixation unilatérale, où les objectifs doivent être réalistes et communiqués au salarié en début d’exercice.
+
+
+Comment le juge fixe-t-il la rémunération variable en cas de litige ?
+Le juge fixe la rémunération variable selon les critères contractuels et les accords passés, ou les données disponibles si les accords sont absents.
+
+
+Quelles sont les conséquences du non-respect des obligations par l'employeur ?
+Si l'employeur n'engage pas les concertations nécessaires, il peut être condamné à verser l'intégralité de la rémunération variable pour chaque exercice.
+
+
+Quelles conditions peuvent être imposées pour l'ouverture des droits à une rémunération variable ?
+L'ouverture des droits à une rémunération variable peut être conditionnée à la présence du salarié à la date d'échéance de la période concernée.
+
+
+Quels types de gratifications existent ?
+Les types de gratifications incluent les primes et les gratifications bénévoles.
+
+
+Décris la décision de l'employeur concernant les primes.
+L'employeur a une décision libre concernant le versement et le montant des primes.
+
+
+Quelles sont les conditions que les primes doivent respecter ?
+Les primes doivent respecter l’égalité entre les salariés.
+
+
+Définis ce que signifie une prime obligatoire.
+Une prime devient obligatoire si elle est issue d’usages constants, de conventions collectives, de contrats individuels, ou d’engagements unilatéraux de l’employeur.
+
+
+Comment une prime devient-elle obligatoire selon la jurisprudence ?
+Une prime devient obligatoire si elle est constante, fixe et générale.
+
+
+Quelles sont les caractéristiques d'une prime constante ?
+Une prime constante est versée régulièrement, par exemple chaque année sur plusieurs exercices.
+
+
+Qu'est-ce qu'une prime fixe ?
+Une prime fixe a un montant stable ou est calculée selon des règles définies.
+
+
+Qu'est-ce qu'une prime générale ?
+Une prime générale est attribuée à tout le personnel ou à une catégorie de salariés.
+
+
+Donne un exemple de prime qui devient obligatoire.
+Une prime versée au même salarié ou à une catégorie sur plusieurs années devient obligatoire.
+
+
+Que se passe-t-il si les conditions d'attribution d'une prime manquent de clarté ?
+C'est au juge de statuer en cas de litige.
+
+
+Quelles sont les conditions d'attribution collective d'une prime ?
+La prime doit concerner l’ensemble des salariés ou une catégorie définie.
+
+
+Peut-on attribuer une prime à un seul salarié ?
+Non, sauf si ce salarié est l’unique représentant d’une catégorie professionnelle.
+
+
+Quel est l'objectif de l'intéressement ?
+L'objectif de l'intéressement est d'associer les salariés aux résultats et performances de l’entreprise par des primes.
+
+
+Quelles sont les caractéristiques de l'intéressement ?
+L'intéressement est un dispositif facultatif pour les employeurs de droit privé et accessible à toutes les entreprises respectant leurs obligations légales de représentation du personnel.
+
+
+Décris le caractère collectif de la participation.
+Tous les salariés doivent pouvoir en bénéficier, avec une condition d’ancienneté possible.
+
+
+Comment est déterminée la participation des salariés aux résultats de l'entreprise ?
+Elle est aléatoire et basée sur des formules de calcul liées aux résultats ou performances comme la productivité, la qualité, et la sécurité.
+
+
+Quel est l'objectif principal de la participation ?
+Permettre aux salariés de participer aux résultats de l’entreprise.
+
+
+Quelles sont les caractéristiques de la participation pour les entreprises ?
+Obligatoire pour les entreprises de plus de 50 salariés, facultatif pour les autres, et peut être conclue pour une durée déterminée ou indéterminée.
+
+
+Qui est concerné par la participation dans une entreprise ?
+Tous les salariés ayant un contrat de travail, sous réserve d’ancienneté éventuelle.
+
+
+Quelles exclusions peuvent exister dans le cadre de la participation ?
+Exclusion possible pour certains revenus non assujettis à l’assiette de calcul.
+
+
+Quel est l'objectif d'un plan d'épargne salariale ?
+Permettre aux salariés de constituer un portefeuille de valeurs mobilières avec l’aide de l’entreprise.
+
+
+Quels sont les types de plans d'épargne salariale ?
+Plan d’épargne entreprise (PEE), Plan d’épargne interentreprises (PEI), Plan d’épargne retraite d’entreprise collectif (Pereco).
+
+
+Quels sont les avantages d'un plan d'épargne salariale ?
+Bénéficie d’exonérations fiscales pour l’entreprise et les salariés.
+
+
+Quel est le montant maximum des versements dans un plan d'épargne salariale ?
+Les versements sont limités à 25 % de la rémunération annuelle ou du revenu professionnel.
+
+
+Définis les stock-options dans le cadre de l'actionnariat.
+Elles permettent aux salariés et mandataires sociaux d’une société d’acquérir des actions à des conditions avantageuses.
+
+
+À quelles sociétés peuvent concerner les actions acquises par le biais des stock-options ?
+Ces actions peuvent concerner la société qui emploie ou une autre société du même groupe.
+
+
+Décris le mécanisme d'attribution d'options d'achat d'actions.
+L'autorisation est donnée par l'assemblée générale extraordinaire, le conseil d'administration ou le directoire propose des options d'achat à un prix fixé le jour de la décision, ce prix reste inchangé pendant la durée de l'option.
+
+
+Quels sont les avantages pour les bénéficiaires des options d'achat d'actions ?
+Les bénéficiaires peuvent acheter des actions à un prix inférieur à leur valeur actuelle sur le marché en cas de hausse de cette valeur, avec un délai prévu pour exercer ce droit.
+
+
+Définis les attributions gratuites d'actions.
+Les sociétés par actions peuvent attribuer gratuitement des actions à tout ou partie de leur personnel et mandataires sociaux.
+
+
+Quelles sont les conditions pour les attributions gratuites d'actions ?
+L'autorisation par l'assemblée générale extraordinaire est requise, avec des conditions définies pour les délais d'acquisition et la conservation des titres.
+
+
+Comment le conseil d'administration ou le directoire décide-t-il des attributions gratuites d'actions ?
+Ils décident des bénéficiaires et fixent les critères d'attribution.
+
+
+Quel est l'objet du suivi des compétences ?
+Il permet à l'employeur d'évaluer les compétences professionnelles du salarié.
+
+
+À quelle fréquence le suivi des compétences est-il généralement effectué ?
+En principe tous les ans, mais cela peut être adapté, par exemple tous les 6 mois.
+
+
+Quels sujets sont abordés lors de l'entretien de suivi des compétences ?
+L'entretien porte sur la charge et l'organisation du travail, l'articulation entre activité professionnelle et vie personnelle, et la rémunération.
+
+
+Décrivez l'initiative concernant l'entretien d'évaluation pour l'employeur.
+L'entretien d'évaluation est facultatif pour l'employeur, sauf disposition prévue par une convention collective.
+
+
+Comment les salariés doivent-ils être informés de l'entretien d'évaluation ?
+Les salariés doivent être informés individuellement ou collectivement, par exemple par affichage.
+
+
+Quelle est l'obligation de l'employeur concernant l'adaptation des salariés ?
+L'employeur doit assurer l'adaptation des salariés à leur poste via la formation, notamment en cas de projet de licenciement économique.
+
+
+Quel est le rôle de l'employeur dans le maintien de l'employabilité des salariés ?
+L'employeur doit maintenir l'employabilité des salariés face à l'évolution des emplois, technologies et organisations.
+
+
+Définissez la fréquence de l'entretien professionnel.
+L'entretien professionnel a lieu tous les 2 ans, apprécié à la date d'embauche.
+
+
+Quel est l'objectif principal de l'entretien professionnel ?
+L'objectif principal est l'examen des perspectives d'évolution (qualifications, emploi) et la validation des acquis (CPF, formations).
+
+
+Quelles sont les obligations après certaines absences longues concernant l'entretien professionnel ?
+L'entretien professionnel est obligatoire après certaines absences longues comme les congés maternité, parental, sabbatique, maladie, etc.
+
+
+À quelle fréquence doit avoir lieu le bilan récapitulatif des actions réalisées pour favoriser l'évolution professionnelle ?
+Le bilan récapitulatif doit avoir lieu tous les 6 ans.
+
+
+Définir le harcèlement moral selon le Code du travail.
+Agissements répétés entraînant une dégradation des conditions de travail, portant atteinte à la dignité, à la santé physique ou mentale, ou compromettant l'avenir professionnel.
+
+
+Quelles sont les conséquences pénales du harcèlement moral ?
+Il est puni par 2 ans d’emprisonnement et 30 000 euros d’amende.
+
+
+Identifier les auteurs possibles de harcèlement moral.
+Peut être vertical (hiérarchique) ou horizontal (entre collègues), incluant employeurs, subordonnés, médecins du travail ou un tiers.
+
+
+Quels sont les éléments constitutifs du harcèlement moral ?
+Agissements répétés, dégradation des conditions de travail avec atteinte à la dignité, à la santé ou à l’avenir professionnel.
+
+
+Définir le harcèlement sexuel selon le Code du travail et pénal.
+Propos ou comportements à connotation sexuelle ou sexiste répétés ou pressions graves pour obtenir un acte sexuel.
+
+
+Quels sont les éléments constitutifs du harcèlement sexuel ?
+Propos répétés (au moins 2 fois), non consentis, portant atteinte à la dignité.
+
+
+Citer des types de discriminations mentionnés dans le contenu.
+Discrimination syndicale, discrimination en matière de grève, discrimination femmes/hommes en matière de rémunération.
+
+
+Quels critères peuvent être à l'origine de discriminations ?
+Origine, sexe, âge, apparence physique, convictions religieuses, activités syndicales et/ou politiques, état de santé.
+
+
+Décrire les recours possibles en cas de discrimination.
+Recours internes (CSE, inspection du travail) ou externes (justice civile ou prud’homale, pénale).
+
+
+Qui peut être considéré comme victime de discrimination dans une entreprise ?
+Lorsqu'au moins deux salariés ou candidats à un emploi dans la même entreprise s'estiment victimes d'une discrimination fondée sur un même motif.
+
+
+Définir les risques psychosociaux (RPS).
+Les risques psychosociaux (RPS) incluent le stress, le burn-out, le bore-out et le brown-out.
+
+
+Quelles sont les conséquences des risques psychosociaux ?
+Les conséquences des risques psychosociaux peuvent être physiques, émotionnelles, intellectuelles et comportementales.
+
+
+Comment un salarié peut-il réagir face aux risques psychosociaux ?
+Un salarié peut constituer des preuves (carnet de bord, récit explicatif détaillé) et signaler la situation en interne ou en externe (médecin du travail, inspection du travail, syndicats).
+
+
+Quelles obligations a un employeur concernant les risques psychosociaux ?
+L'employeur a l'obligation de prévention et doit prendre des mesures correctives immédiates, sinon il s'expose à une majoration de l'indemnisation du salarié victime.
+
+
+Quelle est la mission de la CSSCT ?
+La CSSCT a pour mission de contribuer à la santé physique et mentale des salariés.
+
+
+Comment un salarié peut-il solliciter la CSSCT ?
+Le salarié peut saisir la CSSCT pour qu'elle propose des actions de prévention en matière de harcèlement moral.
+
+
+Quel est le rôle du médecin du travail ?
+Le médecin du travail est tenu au secret professionnel et doit être accessible, avec la prise de contact facilitée par l'employeur.
+
+
+Quelles ressources externes peuvent aider en cas de risques psychosociaux ?
+Les ressources externes incluent l'inspection du travail, le défenseur des droits et des associations offrant un soutien juridique et moral.
+
+
+Quels recours existent en cas de discrimination liée aux risques psychosociaux ?
+Les recours incluent la juridiction prud’homale pour l'annulation des décisions discriminatoires et la juridiction pénale pour les poursuites en cas de harcèlement.
+
+
+Comment la législation protège-t-elle les témoins des victimes de harcèlement ?
+La législation prohibe les actes qui pourraient freiner la liberté de résistance, de plainte ou d'expression des témoins, tels que sanctions, licenciement ou mesures discriminatoires.
+
+
+Quelles sanctions encourt un acte contraire aux lois sur le harcèlement ?
+Tout acte contraire à ces lois encourt la nullité.
+
+
+Décrire les types de motifs de licenciement personnels.
+Les motifs personnels de licenciement incluent des motifs disciplinaires (faute simple, grave, lourde) et non disciplinaires (inaptitude, insuffisance professionnelle).
+
+
+Comment sont calculées les indemnités de licenciement légales ?
+Les indemnités légales de licenciement sont de 1/4 de mois de salaire par année jusqu’à 10 ans, et de 1/3 au-delà.
+
+
+Définir les conditions nécessaires pour un licenciement économique.
+Les conditions pour un licenciement économique incluent un motif économique réel et sérieux et la consultation du CSE.
+
+
+Quels sont les droits du salarié lors de l'entretien préalable de licenciement ?
+Le salarié a le droit d'être assisté par une personne de son choix ou un conseiller extérieur lors de l'entretien préalable.
+
+
+Expliquer le contenu d'une lettre de convocation à l'entretien préalable.
+La lettre de convocation doit contenir l'objet, la date, l'heure et le lieu de l'entretien.
+
+
+Comment se déroule la procédure de licenciement ?
+La procédure de licenciement commence par une convocation à l'entretien préalable, qui doit être faite par lettre recommandée ou remise en main propre.
+
+
+Quel est le délai minimum pour la convocation à l'entretien préalable ?
+Le délai minimum pour la convocation à l'entretien préalable est de 5 jours ouvrables avant l'entretien.
+
+
+Décrire l'objectif de l'entretien préalable de licenciement.
+L'objectif de l'entretien est de présenter les motifs de la décision envisagée et de proposer un contrat de sécurisation professionnelle (CSP).
+
+
+Quelles sont les indemnités spécifiques en cas de licenciement économique ?
+Les indemnités spécifiques en cas de licenciement économique peuvent inclure un plan de sauvegarde de l’emploi et des mesures de reclassement.
+
+
+Où peut-on obtenir la liste des conseillers pour l'assistance lors de l'entretien ?
+La liste des conseillers peut être obtenue auprès de la mairie ou de l'inspection du travail.
+
+
+Décrivez le délai de notification après un entretien de licenciement.
+Minimum 7 jours ouvrables après l’entretien (15 jours pour les cadres).
+
+
+Quels sont les motifs qui peuvent être mentionnés dans la lettre de licenciement ?
+Motifs économiques (si applicable).
+
+
+Quelles options sont possibles pour un salarié après un licenciement économique ?
+CSP, congé de reclassement (pour grandes entreprises), priorité de réembauche pendant 1 an.
+
+
+Comment un salarié peut-il contester un licenciement ?
+Le salarié peut contester devant le conseil de prud’hommes dans un délai de 12 mois.
+
+
+Que doit faire l'employeur après la notification de licenciement ?
+L’employeur a 15 jours pour détailler les motifs du licenciement, sur demande du salarié ou à son initiative.
+
+
+Quel est le délai pour informer la Dreets d'un licenciement économique ?
+L'employeur informe la Dreets du licenciement économique dans les 8 jours suivant l’envoi de la lettre.
+
+
+Comment se déroule le préavis pour un salarié ?
+Le salarié travaille normalement durant le préavis.
+
+
+Quelles sont les exceptions au travail durant le préavis ?
+Dispense par l’employeur (le salarié est payé comme s’il travaillait) ou acceptation par le salarié d’un CSP, congé de reclassement ou de mobilité.
+
+
+Que se passe-t-il à la fin du préavis ?
+Perception des indemnités : licenciement, préavis, congés payés, éventuelles indemnités supplémentaires (supra-légales).
+
+
+Quels documents doivent être remis au salarié à la fin de son contrat ?
+Certificat de travail, attestation Pôle emploi, solde de tout compte, état récapitulatif des dispositifs d’épargne.
+
+
+Quelles sont les types d'irrégularités pouvant entraîner des sanctions de licenciement ?
+Types d'irrégularités : Fond : Absence de cause réelle et sérieuse. Forme : Non-respect des procédures légales.
+
+
+Quelles sont les conséquences pour l'employeur en cas de licenciement irrégulier ?
+Réintégration : Si le licenciement est jugé irrégulier, le salarié peut être réintégré avec maintien de ses avantages.
+
+
+Décrivez l'indemnité en cas de refus de réintégration.
+L'indemnité est calculée selon un barème prenant en compte l'ancienneté du salarié et la taille de l'entreprise (plus ou moins de 11 salariés).
+
+
+Comment se calcule le remboursement des indemnités chômage ?
+Le remboursement est obligatoire sauf pour les salariés ayant moins de 2 ans d'ancienneté ou en cas de petite entreprise (moins de 11 salariés).
+
+
+Définissez les indemnités spécifiques en cas d'irrégularité de fond.
+L'indemnisation est variable selon la gravité de l'irrégularité de fond (sans cause réelle et sérieuse).
+
+
+Quels sont les motifs discriminatoires ou de harcèlement concernant les indemnités ?
+L'indemnité minimale est de 6 mois de salaire, avec ajout des salaires dus pour la période de nullité du licenciement.
+
+
+Que se passe-t-il en cas de non-respect de la procédure mais avec cause réelle et sérieuse ?
+L'indemnité est plafonnée à 1 mois de salaire.
+
+
+Comment est déterminée l'indemnité en cas de résiliation judiciaire ou prise d'acte ?
+L'indemnité est équivalente à celle d'un licenciement sans cause réelle et sérieuse, sauf si requalifiée en licenciement nul.
+
+
+Quelles sont les conséquences d'un licenciement nul ?
+L'indemnité est identique à celle d'un licenciement nul.
+
+
+Décrivez la rupture conventionnelle.
+La rupture conventionnelle se fait par consentement mutuel, avec un accord écrit et homologation par l'administration, et l'indemnité minimale est équivalente à celle du licenciement.
+
+
+Décris la démission d'un salarié.
+La démission est libre pour le salarié, l'employeur peut considérer l'abandon de poste comme une démission, et un préavis est requis selon la convention collective.
+
+
+Quels sont les droits d'un salarié démissionnaire concernant l'indemnité ?
+Le salarié démissionnaire n'a pas droit à une indemnité, sauf pour les congés payés ou une clause de non-concurrence.
+
+
+Comment un salarié peut-il se rétracter après une démission ?
+Le salarié démissionnaire ne peut pas se rétracter, sauf avec l'accord de son employeur.
+
+
+À quel âge l'employeur peut-il décider de la mise à la retraite d'un salarié ?
+L'employeur peut décider de la mise à la retraite d'un salarié à partir de 67 ans.
+
+
+Quelles sont les caractéristiques de la mise à la retraite ?
+La mise à la retraite est caractérisée par l'absence de procédure, la possibilité de ne pas motiver la rupture, et le droit à une indemnité de fin de carrière.
+
+
+Quel est le montant minimum de l'indemnité de fin de carrière ?
+Le montant de l'indemnité de fin de carrière ne peut pas être inférieur à celui légalement prévu en cas de licenciement.
+
+
+Quelles sont les conditions pour obtenir une indemnité de licenciement ?
+Les motifs ouvrant droit à l'indemnité de licenciement incluent le licenciement pour motif personnel, économique, ou inaptitude.
+
+
+Quelles sont les exceptions à l'indemnité de licenciement ?
+Les exceptions incluent la faute grave ou lourde, la cessation ou dissolution de l'entreprise, et le décès du salarié.
+
+
+Quelle est l'ancienneté minimale requise pour avoir droit à une indemnité de licenciement ?
+L'ancienneté minimale requise est de 8 mois d'ancienneté ininterrompue chez le même employeur.
+
+
+Peut-on avoir une ancienneté inférieure à 8 mois pour obtenir une indemnité ?
+Oui, une ancienneté inférieure est possible selon les conventions collectives ou les usages d'entreprise.
+
+
+Comment l'indemnité de licenciement peut-elle être cumulée ?
+L'indemnité de licenciement peut être cumulée avec d'autres indemnités.
+
+
+Décrire l'indemnité compensatrice de préavis.
+C'est une somme versée à un salarié pour compenser le préavis non respecté lors d'un licenciement.
+
+
+Quelle est l'indemnité compensatrice de congés payés ?
+C'est une indemnité versée au salarié pour les congés payés non pris lors de la rupture du contrat de travail.
+
+
+Définir l'indemnité pour licenciement irrégulier.
+C'est une compensation versée lorsqu'un licenciement est jugé sans cause réelle et sérieuse ou nul.
+
+
+Comment se calcule l'indemnité pour requalification d’un CDD en CDI ?
+Elle est déterminée en fonction de la durée du contrat et des conditions de travail, souvent en se basant sur les indemnités légales.
+
+
+Expliquer la contrepartie financière en cas de clause de non-concurrence.
+C'est une somme versée au salarié pour compenser la restriction de travailler dans un secteur concurrentiel après la fin de son contrat.
+
+
+Quelle est l'indemnité forfaitaire pour contrat de travail dissimulé ?
+C'est une indemnité de 6 mois de salaire versée lorsque le contrat de travail n'est pas déclaré.
+
+
+Décrire la règle de priorité concernant les indemnités.
+Si l'indemnité conventionnelle ou contractuelle est plus favorable que l'indemnité légale, elle s'applique sans cumul.
+
+
+Quels sont les types de sanctions disciplinaires ?
+Les types incluent l'avertissement, la mise à pied, la mutation, la rétrogradation et le licenciement.
+
+
+Comment un salarié peut-il contester une sanction disciplinaire ?
+Il peut saisir le CPH dans un délai raisonnable après la décision de sanction.
+
+
+Quelles sont les restrictions à l'imposition de sanctions disciplinaires ?
+Aucune sanction ne peut être appliquée pour discrimination, exercice d'un droit, alerte ou témoignage.
+
+
+Définir les agissements pouvant entraîner une sanction disciplinaire.
+Ils incluent le non-respect des règles, le refus d'obéir à un ordre, et les actes de harcèlement.
+
+
+Quelles sont les conditions d'annulation d'une sanction par le CPH ?
+Le CPH peut annuler une sanction si elle n'est pas justifiée en la forme ou par rapport à la faute commise.
+
+
+Comment le CPH peut-il annuler un licenciement pour faute ?
+Il peut annuler si le licenciement est lié à des motifs interdisant toute sanction, comme la discrimination ou le harcèlement.
+
+
+Quelles protections existent pour une salariée en lien avec sa grossesse ?
+Une salariée enceinte bénéficie d'une protection contre les sanctions liées à sa grossesse.
+
+
+Décris les conséquences du non-respect de la procédure de protection d'un salarié.
+Le non-respect de la procédure peut entraîner des sanctions pour l'employeur, y compris la nullité du licenciement.
