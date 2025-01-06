@@ -1,11 +1,13 @@
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Clone)]
 enum Operator {
     Plus,
     Minus,
     Divide,
     Multiply,
+    And,
+    Or,
 }
 
 #[derive(Debug, PartialEq, Clone)]
@@ -40,6 +42,29 @@ impl Expr {
         match expr {
             Expr::Literal(n) => n,
             Expr::BinOp { l, op, r } => {
+                if op == Operator::And {
+                    let ExprResult::Bool(l) = Self::eval_impl(*l, vars) else {
+                        panic!("Invalid operation: BinOp with non-boolean operands")
+                    };
+                    if !l {
+                        return ExprResult::Bool(false);
+                    }
+                    let ExprResult::Bool(r) = Self::eval_impl(*r, vars) else {
+                        panic!("Invalid operation: BinOp with non-boolean operands")
+                    };
+                    return ExprResult::Bool(r);
+                } else if op == Operator::Or {
+                    let ExprResult::Bool(l) = Self::eval_impl(*l, vars) else {
+                        panic!("Invalid operation: BinOp with non-boolean operands")
+                    };
+                    if l {
+                        return ExprResult::Bool(true);
+                    }
+                    let ExprResult::Bool(r) = Self::eval_impl(*r, vars) else {
+                        panic!("Invalid operation: BinOp with non-boolean operands")
+                    };
+                    return ExprResult::Bool(r);
+                }
                 let ExprResult::Int(l) = Self::eval_impl(*l, vars) else {
                     panic!("Invalid operation: BinOp with non-integer operands")
                 };
@@ -51,6 +76,7 @@ impl Expr {
                     Operator::Minus => ExprResult::Int(l - r),
                     Operator::Divide => ExprResult::Int(l / r),
                     Operator::Multiply => ExprResult::Int(l * r),
+                    _ => panic!("Invalid operation: BinOp with non-arithmetic operator"),
                 }
             }
             Expr::IfExpr {
@@ -122,6 +148,16 @@ fn parse(value: &Value) -> Expr {
                     "/" => Expr::BinOp {
                         l: Box::new(parse(head2.car())),
                         op: Operator::Divide,
+                        r: Box::new(parse(head3.car())),
+                    },
+                    "and" => Expr::BinOp {
+                        l: Box::new(parse(head2.car())),
+                        op: Operator::And,
+                        r: Box::new(parse(head3.car())),
+                    },
+                    "or" => Expr::BinOp {
+                        l: Box::new(parse(head2.car())),
+                        op: Operator::Or,
                         r: Box::new(parse(head3.car())),
                     },
                     "if" => {
@@ -204,5 +240,17 @@ mod tests {
     fn test_advanced_let_parser() {
         let e = parse(&lexpr::from_str("(let x 42 (+ x 1))").unwrap());
         assert_eq!(Expr::eval(e), ExprResult::Int(43));
+    }
+
+    #[test]
+    fn test_and_parser() {
+        let e = parse(&lexpr::from_str("(and #t #t)").unwrap());
+        assert_eq!(Expr::eval(e), ExprResult::Bool(true));
+    }
+
+    #[test]
+    fn test_or_parser() {
+        let e = parse(&lexpr::from_str("(or #f #t)").unwrap());
+        assert_eq!(Expr::eval(e), ExprResult::Bool(true));
     }
 }

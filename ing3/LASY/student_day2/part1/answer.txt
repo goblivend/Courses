@@ -1,0 +1,5 @@
+#provide your answer in this file
+
+using Post condition and type new in Ada does not propagate the post condition to the derived type.
+The post condition is only applied to the type it is defined in.
+This is why the post condition is not applied to the Vector type.

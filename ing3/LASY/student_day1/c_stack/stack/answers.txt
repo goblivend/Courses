@@ -1,0 +1,4 @@
+#provide your answer in this file
+
+There are no conditions in the push/pop functions to check if the stack is full or empty.
+This can lead to stack overflow or underflow.

@@ -1,11 +1,13 @@
 use std::collections::HashMap;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 enum Operator {
     Plus,
     Minus,
     Divide,
     Multiply,
+    And,
+    Or,
 }
 
 #[derive(Debug, PartialEq, Clone)]
@@ -46,6 +48,29 @@ struct BinOp {
 
 impl Expr for BinOp {
     fn eval(&self, vars: &mut HashMap<String, ExprResult>) -> ExprResult {
+        if self.op == Operator::And {
+            let ExprResult::Bool(l) = self.l.eval(vars) else {
+                panic!("BinOp l: Expected boolean");
+            };
+            if !l {
+                return ExprResult::Bool(false);
+            }
+            let ExprResult::Bool(r) = self.r.eval(vars) else {
+                panic!("BinOp r: Expected boolean");
+            };
+            return ExprResult::Bool(r);
+        } else if self.op == Operator::Or {
+            let ExprResult::Bool(l) = self.l.eval(vars) else {
+                panic!("BinOp l: Expected boolean");
+            };
+            if l {
+                return ExprResult::Bool(true);
+            }
+            let ExprResult::Bool(r) = self.r.eval(vars) else {
+                panic!("BinOp r: Expected boolean");
+            };
+            return ExprResult::Bool(r);
+        }
         let ExprResult::Int(l) = self.l.eval(vars) else {
             panic!("BinOp l: Expected integer");
         };
@@ -57,6 +82,7 @@ impl Expr for BinOp {
             Operator::Minus => ExprResult::Int(l - r),
             Operator::Divide => ExprResult::Int(l / r),
             Operator::Multiply => ExprResult::Int(l * r),
+            _ => panic!("BinOp: Invalid operator"),
         }
     }
 }
@@ -230,5 +256,25 @@ mod tests {
             expr: Box::new(IntLiteral { value: 15 }),
         };
         assert_eq!(eval(&e), ExprResult::Int(15));
+    }
+
+    #[test]
+    fn test_and() {
+        let e = BinOp {
+            l: Box::new(BoolLiteral { value: true }),
+            op: Operator::And,
+            r: Box::new(BoolLiteral { value: false }),
+        };
+        assert_eq!(eval(&e), ExprResult::Bool(false));
+    }
+
+    #[test]
+    fn test_or() {
+        let e = BinOp {
+            l: Box::new(BoolLiteral { value: true }),
+            op: Operator::Or,
+            r: Box::new(BoolLiteral { value: false }),
+        };
+        assert_eq!(eval(&e), ExprResult::Bool(true));
     }
 }

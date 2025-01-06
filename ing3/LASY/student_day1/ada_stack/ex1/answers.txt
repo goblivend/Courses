@@ -1,0 +1,5 @@
+#provide your answer in this file
+
+
+# Q1
+In the stack the index must be `> 0`

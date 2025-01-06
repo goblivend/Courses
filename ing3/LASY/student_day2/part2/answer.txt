@@ -1,0 +1,4 @@
+#provide your answer in this file
+
+No, according to Liskov's principle, the derived class should be able to substitute the base class without affecting the functionality of the program.
+In this case, the set cannot act as a list

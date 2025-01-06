@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 #[derive(Debug, PartialEq, Clone)]
-enum Operator {
+pub enum Operator {
     Plus,
     Minus,
     Divide,
@@ -11,24 +11,24 @@ enum Operator {
 }
 
 #[derive(Debug, PartialEq, Clone)]
-enum ExprResult {
+pub enum ExprResult {
     Bool(bool),
     Int(i32),
 }
 
 #[derive(Debug, PartialEq, Clone)]
-enum ExprType {
+pub enum ExprType {
     Bool,
     Int,
 }
 
-trait Expr {
+pub trait Expr {
     fn eval(&self, vars: &mut HashMap<String, ExprResult>) -> ExprResult;
     fn check_types(&self, vars: &mut HashMap<String, ExprType>) -> Result<ExprType, &'static str>;
 }
 
-struct IntLiteral {
-    value: i32,
+pub struct IntLiteral {
+    pub value: i32,
 }
 
 impl Expr for IntLiteral {
@@ -41,8 +41,8 @@ impl Expr for IntLiteral {
     }
 }
 
-struct BoolLiteral {
-    value: bool,
+pub struct BoolLiteral {
+    pub value: bool,
 }
 
 impl Expr for BoolLiteral {
@@ -55,10 +55,10 @@ impl Expr for BoolLiteral {
     }
 }
 
-struct BinOp {
-    l: Box<dyn Expr>,
-    op: Operator,
-    r: Box<dyn Expr>,
+pub struct BinOp {
+    pub l: Box<dyn Expr>,
+    pub op: Operator,
+    pub r: Box<dyn Expr>,
 }
 
 impl Expr for BinOp {
@@ -128,10 +128,10 @@ impl Expr for BinOp {
     }
 }
 
-struct IfExpr {
-    cond: Box<dyn Expr>,
-    true_branch: Box<dyn Expr>,
-    false_branch: Box<dyn Expr>,
+pub struct IfExpr {
+    pub cond: Box<dyn Expr>,
+    pub true_branch: Box<dyn Expr>,
+    pub false_branch: Box<dyn Expr>,
 }
 
 impl Expr for IfExpr {
@@ -170,10 +170,10 @@ impl Expr for IfExpr {
     }
 }
 
-struct Let {
-    name: String,
-    value: Box<dyn Expr>,
-    body: Box<dyn Expr>,
+pub struct Let {
+    pub name: String,
+    pub value: Box<dyn Expr>,
+    pub body: Box<dyn Expr>,
 }
 
 impl Expr for Let {
@@ -194,8 +194,8 @@ impl Expr for Let {
     }
 }
 
-struct Ref {
-    name: String,
+pub struct Ref {
+    pub name: String,
 }
 
 impl Expr for Ref {
@@ -211,8 +211,8 @@ impl Expr for Ref {
     }
 }
 
-struct Print {
-    expr: Box<dyn Expr>,
+pub struct Print {
+    pub expr: Box<dyn Expr>,
 }
 
 impl Expr for Print {
@@ -227,12 +227,12 @@ impl Expr for Print {
     }
 }
 
-fn eval(expr: &dyn Expr) -> ExprResult {
+pub fn eval(expr: &dyn Expr) -> ExprResult {
     let mut vars = HashMap::new();
     expr.eval(&mut vars)
 }
 
-fn check_types(expr: &dyn Expr) -> Result<ExprType, &'static str> {
+pub fn check_types(expr: &dyn Expr) -> Result<ExprType, &'static str> {
     let mut vars = HashMap::new();
     expr.check_types(&mut vars)
 }
