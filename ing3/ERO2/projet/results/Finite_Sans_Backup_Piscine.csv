@@ -1,0 +1,2 @@
+configuration,lambda_mu1,K,mu2,max_k_s,max_k_f,backup,alpha_s,alpha_f,T_avg,T_var,T_wait1_avg,T_service1_avg,T_wait2_avg,T_service2_avg,load1_avg,load2_avg
+Finite_Sans_Backup_Piscine,"[(16.6, 1.0)]",21,20.0,20,30,Non,0.0%,0.0%,[1.33],[1.09],[0.27],[1.0],[0.24],[0.05],0.78,0.83

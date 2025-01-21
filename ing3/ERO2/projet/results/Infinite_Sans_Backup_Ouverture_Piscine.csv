@@ -1,0 +1,2 @@
+configuration,lambda_mu1,K,mu2,max_k_s,max_k_f,backup,alpha_s,alpha_f,T_avg,T_var,T_wait1_avg,T_service1_avg,T_wait2_avg,T_service2_avg,load1_avg,load2_avg
+Infinite_Sans_Backup_Ouverture_Piscine,"[(100, 1.0)]",125,20.0,,,Non,0.0%,0.0%,[100.47],[3362.25],[0.02],[1.0],[99.42],[0.05],0.73,1.00
