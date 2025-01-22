@@ -1,0 +1,48 @@
+BasedOnStyle: Google  # Base style, customize as needed (Google, LLVM, Chromium, etc.)
+IndentWidth: 4        # Number of spaces per indentation level
+TabWidth: 4           # Tab width in spaces
+UseTab: Never         # Use spaces instead of tabs
+
+# Alignments
+AlignConsecutiveAssignments: false  # Align consecutive assignments
+AlignConsecutiveDeclarations: false # Align consecutive declarations
+AlignOperands: true                # Align operands of binary/multiline expressions
+AlignTrailingComments: true        # Align trailing comments in a block
+
+# Braces and Indentation
+BreakBeforeBraces: Attach           # Attach style for braces (other options: Allman, Linux, etc.)
+IndentCaseLabels: true              # Indent case labels in switch statements
+AllowShortBlocksOnASingleLine: false # Avoid short blocks on a single line
+
+# Column Limit
+ColumnLimit: 100                    # Maximum column width before wrapping
+PenaltyExcessCharacter: 1000        # Penalty for lines exceeding the column limit
+
+# Includes
+SortIncludes: true                  # Sort #include directives alphabetically
+IncludeBlocks: Regroup              # Regroup includes by category (C, C++, project)
+
+# Empty Lines
+KeepEmptyLinesAtTheStartOfBlocks: false # Avoid empty lines at block start
+MaxEmptyLinesToKeep: 1                  # Keep at most 1 empty line in a row
+
+# Spaces
+SpaceAfterCStyleCast: true          # Space after a C-style cast
+SpaceBeforeParens: ControlStatements # Space before parentheses in control statements
+SpaceInEmptyParentheses: false      # No space in empty parentheses
+SpacesInAngles: false               # No spaces inside angle brackets
+SpacesInContainerLiterals: false    # No spaces in container literals like {} or []
+
+# Pointer and Reference
+PointerAlignment: Left              # Place '*' or '&' adjacent to type (Left, Right, Middle)
+
+# Wrapping
+AllowShortFunctionsOnASingleLine: Empty # Allow short functions on one line if empty
+AllowShortIfStatementsOnASingleLine: false # Avoid short if statements on one line
+BreakConstructorInitializersBeforeComma: false # Avoid breaking constructor initializer list
+PenaltyReturnTypeOnItsOwnLine: 200    # Penalty for return type on its own line
+
+# Method Parameters and Arguments
+AllowAllParametersOfDeclarationOnNextLine: false # Prevent all parameters on a single line
+BinPackParameters: false                         # Force one parameter per line
+BinPackArguments: false                          # Force one argument per line in function calls
