@@ -1,0 +1,50 @@
+---
+
+
+
+stages:
+  - lint
+  - display-lint
+
+.lnt:
+  image: python:3.11-alpine
+  allow_failure: true
+  stage: lint 
+
+
+.rule: 
+  rules:
+     - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_MESSAGE !~ /no-ci/
+       when: always
+
+frontend:
+  extends:
+    - .lnt 
+    - .rule
+  script:
+    - pip install ruff
+    - ruff frontend/ > frontend.arti
+  artifacts:
+    when: always
+    paths:
+       - frontend.arti
+
+backend:
+  extends: 
+    - .lnt
+    - .rule
+  script: 
+    - pip install ruff
+    - ruff backend/ > backend.arti
+  artifacts:
+    when: always
+    paths:
+       - backend.arti
+
+tmp:
+  stage: display-lint
+  extends: .rule
+  script: 
+      - cat frontend.arti
+      - cat backend.arti
+
