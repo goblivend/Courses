@@ -1,0 +1,16 @@
+Pour pouvoir lancer la simulation de la voiture d'ackermann en environnement
+dockerisé avec la camera :
+
+42sh$ xhost +local:docker
+42sh$ docker build -t ros_robot .
+42sh$ docker run -it --rm --network host --env DISPLAY=$DISPLAY --env QT_X11_NO_MITSHM=1 --volume /tmp/.X11-unix:/tmp/.X11-unix -v ./worlds/:/home/ros2_ws/worlds/ ros_robot
+
+
+Ensuite dans le terminal de docker, il ya le setup à faire :
+
+root# . /opt/ros/"${ROS_DISTRO}"/setup.sh
+root# . /home/ros2_ws/install/setup.sh
+
+Maintenant, il est possible de lancer le package suivant avec le world que vous souhaitez :
+
+root# ros2 launch ros_robot launch_sim.launch.py world:=/home/ros2_ws/worlds/generated_world.sdf
